@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #0a0a0a, #3a4452);
+}
+
+.calculator {
+    width: 90%; /* Adjusted to keep content centered */
+    max-width: 400px;
+    border: 1px solid #717377;
+    padding: 20px;
+    border-radius: 16px;
+    background: transparent;
+    box-shadow: 0px 3px 15px rgba(113, 115, 119, 0.5);
+    display: flex;
+    flex-direction: column; /* Keeps input and buttons vertically aligned */
+    align-items: center;
+}
+
+input {
+    width: 100%; /* Stretches to fit the calculator width */
+    height: 80px; /* Fixed height for consistency */
+    border: none;
+    padding: 0 20px;
+    background: transparent;
+    margin-bottom: 20px;
+    box-shadow: 0px 3px 15px rgba(84, 84, 84, 0.1);
+    font-size: 40px;
+    text-align: right;
+    color: #ffffff;
+    transition: font-size 0.2s ease;
+    line-height: 80px;
+}
+
+input::placeholder {
+    color: #ffffff;
+}
+
+button {
+    border: none;
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    border-radius: 50%;
+    background: transparent;
+    color: white;
+    font-size: 22px;
+    box-shadow: -10px -10px 15px rgba(0, 0, 0, 0.9);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.equalbtn {
+    background-color: #fb7c14;
+}
+
+.operator {
+    color: #6dee0a;
+}
+
+/* Ensure buttons are aligned in rows */
+.calculator > div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .calculator {
+        width: 95%;
+    }
+
+    input {
+        height: 70px;
+    }
+
+}
